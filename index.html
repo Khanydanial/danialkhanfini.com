@@ -4,7 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Danial Khan Fini — Composer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap');
+</style>
 <style>
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 :root {
@@ -12,8 +17,8 @@
   --text:#e8e6e0; --text-mid:#8a9aaa; --text-dim:#3a4f63;
   --accent:#c4a882; --accent2:#8a7255;
   --border:rgba(232,230,224,0.07);
-  --serif:"EB Garamond",Georgia,serif;
-  --sans:"DM Sans",system-ui,sans-serif;
+  --serif:"EB Garamond",Garamond,"Cormorant Garamond","Times New Roman",serif;
+  --sans:"DM Sans","Helvetica Neue",Arial,sans-serif;
   --nav-w:260px; --bot-h:64px;
   --ease:0.7s cubic-bezier(0.77,0,0.175,1);
 }
@@ -56,8 +61,8 @@ html,body { width:100%; height:100%; overflow:hidden; font-family:var(--sans); b
 .hero-ct { position:relative; z-index:1; display:flex; flex-direction:column; justify-content:flex-end; height:100%; padding:0 56px 72px; }
 .hero-tag { font-size:10px; font-weight:500; letter-spacing:0.24em; text-transform:uppercase; color:var(--accent); margin-bottom:18px; display:flex; align-items:center; gap:12px; opacity:0; animation:fUp 1s 1s forwards; }
 .hero-tag::before { content:""; width:28px; height:1px; background:var(--accent); }
-.hero h1 { font-family:"EB Garamond","Georgia",serif; font-size:clamp(80px,13vw,160px); font-weight:400; font-style:normal; line-height:0.88; letter-spacing:-0.02em; opacity:0; animation:fUp 1s 1.2s forwards; margin-bottom:22px; }
-.hero h1 em { font-family:"EB Garamond","Georgia",serif; font-style:italic; font-weight:400; color:var(--accent); }
+.hero h1 { font-family:var(--serif); font-size:120px; font-weight:400; font-style:normal; line-height:0.88; letter-spacing:-0.01em; opacity:0; animation:fUp 1s 1.2s forwards; margin-bottom:22px; }
+.hero h1 em { font-style:italic; color:var(--accent); }
 .hero-sub { font-size:13px; color:rgba(232,230,224,0.6); max-width:340px; line-height:1.9; opacity:0; animation:fUp 1s 1.4s forwards; margin-bottom:40px; }
 .hero-ctas { display:flex; gap:12px; flex-wrap:wrap; opacity:0; animation:fUp 1s 1.6s forwards; }
 .btn-s { padding:12px 28px; background:var(--text); color:var(--bg); font-size:11px; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; text-decoration:none; cursor:pointer; border:none; transition:background 0.25s,transform 0.15s; font-family:var(--sans); }
@@ -178,7 +183,7 @@ html,body { width:100%; height:100%; overflow:hidden; font-family:var(--sans); b
   .pbg { display:none; }
   .sh { display:none; }
   .fbar { flex-direction:column; gap:6px; }
-  .hero h1 { font-size:clamp(64px,16vw,100px); }
+  .hero h1 { font-size:72px; }
   .pt { font-size:clamp(28px,8vw,44px); }
   .cbig { font-size:clamp(30px,9vw,52px); }
   .album-header { grid-template-columns:1fr; }
@@ -194,10 +199,11 @@ html,body { width:100%; height:100%; overflow:hidden; font-family:var(--sans); b
   <a href="#" class="logo" onclick="goTo(0);return false;">Danial Khan Fini</a>
   <ul class="nav-links">
     <li><a href="#" onclick="goTo(1);return false;">About</a></li>
-    <li><a href="#" onclick="goTo(2);return false;">Film Scores</a></li>
-    <li><a href="#" onclick="goTo(3);return false;">Sheet Music</a></li>
-    <li><a href="#" onclick="goTo(4);return false;">Performances</a></li>
-    <li><a href="#" onclick="goTo(5);return false;">Contact</a></li>
+    <li><a href="#" onclick="goTo(2);return false;">Compositions</a></li>
+    <li><a href="#" onclick="goTo(3);return false;">Film Scores</a></li>
+    <li><a href="#" onclick="goTo(4);return false;">Sheet Music</a></li>
+    <li><a href="#" onclick="goTo(5);return false;">Performances</a></li>
+    <li><a href="#" onclick="goTo(6);return false;">Contact</a></li>
   </ul>
   <div class="nav-social">
     <a href="mailto:danialkhani10@gmail.com">Email</a>
@@ -209,10 +215,11 @@ html,body { width:100%; height:100%; overflow:hidden; font-family:var(--sans); b
 <nav class="nav-m">
   <button class="mb active" onclick="goTo(0)"><div class="mb-dot"></div><span>Home</span></button>
   <button class="mb" onclick="goTo(1)"><div class="mb-dot"></div><span>About</span></button>
-  <button class="mb" onclick="goTo(2)"><div class="mb-dot"></div><span>Film</span></button>
-  <button class="mb" onclick="goTo(3)"><div class="mb-dot"></div><span>Scores</span></button>
-  <button class="mb" onclick="goTo(4)"><div class="mb-dot"></div><span>Live</span></button>
-  <button class="mb" onclick="goTo(5)"><div class="mb-dot"></div><span>Contact</span></button>
+  <button class="mb" onclick="goTo(2)"><div class="mb-dot"></div><span>Works</span></button>
+  <button class="mb" onclick="goTo(3)"><div class="mb-dot"></div><span>Film</span></button>
+  <button class="mb" onclick="goTo(4)"><div class="mb-dot"></div><span>Scores</span></button>
+  <button class="mb" onclick="goTo(5)"><div class="mb-dot"></div><span>Live</span></button>
+  <button class="mb" onclick="goTo(6)"><div class="mb-dot"></div><span>Contact</span></button>
 </nav>
 
 <div class="wrap">
@@ -224,11 +231,12 @@ html,body { width:100%; height:100%; overflow:hidden; font-family:var(--sans); b
       <div class="hero-ov"></div>
       <div class="hero-ct">
         <div class="hero-tag">Composer · Tilburg, Netherlands</div>
-        <h1>Danial<br>Khan <em>Fini</em></h1>
+        <h1 class="pt" style="font-size:clamp(52px,8vw,96px);line-height:0.88;opacity:0;animation:fUp 1s 1.2s forwards;margin-bottom:22px;">Danial<br>Khan <em>Fini</em></h1>
         <p class="hero-sub">Blending Persian musical tradition with Western classical harmony. Writing for ensembles, film, and theatre.</p>
         <div class="hero-ctas">
-          <a href="#" class="btn-s" onclick="goTo(2);return false;">Film Scores</a>
-          <a href="#" class="btn-o" onclick="goTo(5);return false;">Contact</a>
+          <a href="#" class="btn-s" onclick="goTo(2);return false;">Compositions</a>
+          <a href="#" class="btn-s" onclick="goTo(3);return false;">Film Scores</a>
+          <a href="#" class="btn-o" onclick="goTo(6);return false;">Contact</a>
         </div>
       </div>
       <div class="sh"><div class="sl"></div><span>Drag or click nav</span></div>
@@ -265,16 +273,39 @@ html,body { width:100%; height:100%; overflow:hidden; font-family:var(--sans); b
       </div>
     </div>
 
-    <!-- 2: FILM SCORES -->
-    <div class="panel p-film pc" data-index="2">
+    <!-- 2: COMPOSITIONS -->
+    <div class="panel p-sheet pc" data-index="2">
+      <div class="ey rv">Compositions</div>
+      <h2 class="pt rv">Concert<br><em>Works</em></h2>
+
+      <!-- Standing in the Dust -->
+      <div class="album-block rv">
+        <div class="album-header" style="grid-template-columns:1fr;">
+          <div class="album-player">
+            <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">Concert Work · 2025</div>
+            <div style="font-family:var(--serif);font-size:26px;color:var(--text);margin-bottom:4px;">Standing in the Dust</div>
+            <div style="font-size:13px;color:var(--text-mid);margin-bottom:20px;">Performed by Jaap Duijkers</div>
+            <!-- Spotify embed — album version -->
+            <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px;">Album Version</div>
+            <iframe style="border-radius:4px;width:100%;height:80px;border:none;" src="https://open.spotify.com/embed/track/5TxySMPck9g0lG57HWTyp1?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        </div>
+        <!-- Live performance video -->
+        <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-dim);padding:16px 0 8px;">Live Performance</div>
+        <div style="position:relative;width:100%;aspect-ratio:16/9;background:#000;">
+          <iframe style="position:absolute;inset:0;width:100%;height:100%;border:none;" src="https://www.youtube.com/embed/lKvmLbv085Q" title="Standing in the Dust — Danial Khan Fini" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3: FILM SCORES -->
+    <div class="panel p-film pc" data-index="3">
       <div class="ey rv">Film Scores</div>
       <h2 class="pt rv">Music for<br><em>the Screen</em></h2>
 
       <!-- Album: A Story About Sahel -->
       <div class="album-block rv">
         <div class="album-header">
-
-          <!-- Cover -->
           <div class="album-cover">
             <img src="cover.jpg" alt="A Story About Sahel">
             <div class="album-cover-info">
@@ -283,82 +314,275 @@ html,body { width:100%; height:100%; overflow:hidden; font-family:var(--sans); b
               <div class="adir">dir. Soroush Emtiaz</div>
             </div>
           </div>
-
-          <!-- Player -->
           <div class="album-player">
             <div class="tlist">
-              <div class="trow" onclick="pT(0)">
-                <div class="tnum">1</div>
-                <div class="tname">In the Woods</div>
-                <div class="tdur" id="d0">—</div>
-              </div>
-              <div class="trow" onclick="pT(1)">
-                <div class="tnum">2</div>
-                <div class="tname">Looking for Sahel</div>
-                <div class="tdur" id="d1">—</div>
-              </div>
-              <div class="trow" onclick="pT(2)">
-                <div class="tnum">3</div>
-                <div class="tname">Police Station</div>
-                <div class="tdur" id="d2">—</div>
-              </div>
-              <div class="trow" onclick="pT(3)">
-                <div class="tnum">4</div>
-                <div class="tname">Reza's Farewell</div>
-                <div class="tdur" id="d3">—</div>
-              </div>
+              <div class="trow" onclick="pT(0)"><div class="tnum">1</div><div class="tname">In the Woods</div><div class="tdur" id="d0">—</div></div>
+              <div class="trow" onclick="pT(1)"><div class="tnum">2</div><div class="tname">Looking for Sahel</div><div class="tdur" id="d1">—</div></div>
+              <div class="trow" onclick="pT(2)"><div class="tnum">3</div><div class="tname">Police Station</div><div class="tdur" id="d2">—</div></div>
+              <div class="trow" onclick="pT(3)"><div class="tnum">4</div><div class="tname">Reza's Farewell</div><div class="tdur" id="d3">—</div></div>
             </div>
             <div class="pcontrols">
               <div id="nowP">Select a track to play</div>
               <div id="progWrap" onclick="sk(event)"><div id="progBar"></div></div>
-              <div class="ptimes">
-                <span id="curT">0:00</span>
-                <span id="totT">0:00</span>
-              </div>
+              <div class="ptimes"><span id="curT">0:00</span><span id="totT">0:00</span></div>
               <div class="pbtns">
-                <button class="pbtn" onclick="prv()">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
-                </button>
-                <button id="playBtn" onclick="tog()">
-                  <svg id="pIco" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                </button>
-                <button class="pbtn" onclick="nxt()">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zm2-8.14L11.03 12 8 14.14V9.86zM16 6h2v12h-2z"/></svg>
+                <button class="pbtn" onclick="prv()"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg></button>
+                <button id="playBtn" onclick="tog()"><svg id="pIco" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+                <button class="pbtn" onclick="nxt()"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zm2-8.14L11.03 12 8 14.14V9.86zM16 6h2v12h-2z"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="position:relative;width:100%;aspect-ratio:16/9;background:#000;">
+          <iframe style="position:absolute;inset:0;width:100%;height:100%;border:none;" src="https://www.youtube.com/embed/eWeXftaERt4" title="A Story About Sahel — dir. Soroush Emtiaz" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Album: Contagious -->
+      <div class="album-block rv">
+        <div class="album-header">
+          <div class="album-cover">
+            <img src="contagious_cover.jpg" alt="Contagious">
+            <div class="album-cover-info">
+              <div class="atag">Film Score · 2023</div>
+              <div class="aname">Contagious</div>
+              <div class="adir">dir. Mohammadreza Noori</div>
+            </div>
+          </div>
+          <div class="album-player">
+            <div class="tlist">
+              <div class="trow" onclick="pT4(0)"><div class="tnum">1</div><div class="tname">Contagious</div><div class="tdur" id="t4d0">—</div></div>
+            </div>
+            <div class="pcontrols">
+              <div id="nowP4">Select a track to play</div>
+              <div id="progWrap4" onclick="sk4(event)"><div id="progBar4"></div></div>
+              <div class="ptimes"><span id="curT4">0:00</span><span id="totT4">0:00</span></div>
+              <div class="pbtns">
+                <button id="playBtn4" onclick="tog4()" style="background:var(--text);border:none;cursor:pointer;color:var(--bg);width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.background='var(--text)';this.style.color='var(--bg)'">
+                  <svg id="pIco4" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                 </button>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Footage placeholder -->
-        <div class="footage-block">
-          <div class="footage-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+      <!-- Album: Tunnel -->
+      <div class="album-block rv">
+        <div class="album-header">
+          <div class="album-cover">
+            <img src="tunnel_cover.jpg" alt="Tunnel">
+            <div class="album-cover-info">
+              <div class="atag">Film Score · 2023</div>
+              <div class="aname">Tunnel</div>
+              <div class="adir">dir. Maryam Bahmanpour</div>
+            </div>
           </div>
-          <div class="footage-label">Film footage</div>
-          <div class="footage-sub">Coming soon</div>
+          <div class="album-player">
+            <div class="tlist">
+              <div class="trow" onclick="pT2(0)"><div class="tnum">1</div><div class="tname">Tunnel</div><div class="tdur" id="t2d0">—</div></div>
+            </div>
+            <div class="pcontrols">
+              <div id="nowP2">Select a track to play</div>
+              <div id="progWrap2" onclick="sk2(event)"><div id="progBar2"></div></div>
+              <div class="ptimes"><span id="curT2">0:00</span><span id="totT2">0:00</span></div>
+              <div class="pbtns">
+                <button id="playBtn2" onclick="tog2()" style="background:var(--text);border:none;cursor:pointer;color:var(--bg);width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.background='var(--text)';this.style.color='var(--bg)'">
+                  <svg id="pIco2" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <audio id="aud"></audio>
+      <!-- Album: Soundless -->
+      <div class="album-block rv">
+        <div class="album-header">
+          <div class="album-cover">
+            <img src="soundless_cover.jpg" alt="Soundless">
+            <div class="album-cover-info">
+              <div class="atag">Film Score · 2023</div>
+              <div class="aname">Soundless</div>
+              <div class="adir">dir. Elaheh Poursand</div>
+            </div>
+          </div>
+          <div class="album-player">
+            <div class="tlist">
+              <div class="trow" onclick="pT3(0)"><div class="tnum">1</div><div class="tname">Introduction</div><div class="tdur" id="t3d0">—</div></div>
+              <div class="trow" onclick="pT3(1)"><div class="tnum">2</div><div class="tname">Soundless</div><div class="tdur" id="t3d1">—</div></div>
+            </div>
+            <div class="pcontrols">
+              <div id="nowP3">Select a track to play</div>
+              <div id="progWrap3" onclick="sk3(event)"><div id="progBar3"></div></div>
+              <div class="ptimes"><span id="curT3">0:00</span><span id="totT3">0:00</span></div>
+              <div class="pbtns">
+                <button class="pbtn" onclick="prv3()"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg></button>
+                <button id="playBtn3" onclick="tog3()" style="background:var(--text);border:none;cursor:pointer;color:var(--bg);width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='var(--text)'" onmouseout="this.style.background='var(--text)';this.style.color='var(--bg)'">
+                  <svg id="pIco3" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <button class="pbtn" onclick="nxt3()"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zm2-8.14L11.03 12 8 14.14V9.86zM16 6h2v12h-2z"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <audio id="aud4"></audio>
+
+      <script>
+      var TRX4 = [{n:"Contagious", s:"contagious.mp3"}];
+      var aud4 = document.getElementById('aud4');
+      var ct4 = -1, playing4 = false;
+
+      (function(){
+        var a = new Audio(TRX4[0].s);
+        a.addEventListener('loadedmetadata', function(){
+          var el = document.getElementById('t4d0');
+          if(el) el.textContent = fmt(a.duration);
+        });
+      })();
+
+      function pT4(i){ ct4=i; aud4.src=TRX4[i].s; aud4.play(); playing4=true; ui4(); }
+      function tog4(){
+        if(ct4===-1){ pT4(0); return; }
+        if(playing4){ aud4.pause(); playing4=false; } else { aud4.play(); playing4=true; }
+        ui4();
+      }
+      function sk4(e){
+        var r=document.getElementById('progWrap4').getBoundingClientRect();
+        if(aud4.duration) aud4.currentTime=((e.clientX-r.left)/r.width)*aud4.duration;
+      }
+      aud4.addEventListener('timeupdate', function(){
+        var p=aud4.duration?(aud4.currentTime/aud4.duration)*100:0;
+        document.getElementById('progBar4').style.width=p+'%';
+        document.getElementById('curT4').textContent=fmt(aud4.currentTime);
+        document.getElementById('totT4').textContent=fmt(aud4.duration);
+      });
+      aud4.addEventListener('ended', function(){ playing4=false; ui4(); });
+      function ui4(){
+        document.getElementById('pIco4').innerHTML=playing4
+          ?'<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>'
+          :'<path d="M8 5v14l11-7z"/>';
+        document.getElementById('nowP4').textContent=ct4>=0?'Now playing — '+TRX4[ct4].n:'Select a track to play';
+        document.querySelectorAll('[onclick*="pT4"]').forEach(function(r,i){
+          var a=i===ct4;
+          r.style.paddingLeft=a?'10px':'0';
+          var num=r.querySelector('.tnum'),nm=r.querySelector('.tname');
+          if(num) num.style.color=a?'var(--accent)':'var(--text-dim)';
+          if(nm) nm.style.color=a?'var(--accent)':'var(--text)';
+        });
+      }
+      </script>
+
+      <script>
+      var TRX3 = [
+        {n:"Introduction", s:"soundless_intro.mp3"},
+        {n:"Soundless", s:"soundless_main.mp3"}
+      ];
+      var aud3 = document.getElementById('aud3');
+      var ct3 = -1, playing3 = false;
+
+      TRX3.forEach(function(t,i){
+        var a = new Audio(t.s);
+        a.addEventListener('loadedmetadata', function(){
+          var el = document.getElementById('t3d'+i);
+          if(el) el.textContent = fmt(a.duration);
+        });
+      });
+
+      function pT3(i){ ct3=i; aud3.src=TRX3[i].s; aud3.play(); playing3=true; ui3(); }
+      function tog3(){
+        if(ct3===-1){ pT3(0); return; }
+        if(playing3){ aud3.pause(); playing3=false; } else { aud3.play(); playing3=true; }
+        ui3();
+      }
+      function prv3(){ if(ct3>0) pT3(ct3-1); }
+      function nxt3(){ if(ct3<TRX3.length-1) pT3(ct3+1); }
+      function sk3(e){
+        var r=document.getElementById('progWrap3').getBoundingClientRect();
+        if(aud3.duration) aud3.currentTime=((e.clientX-r.left)/r.width)*aud3.duration;
+      }
+      aud3.addEventListener('timeupdate', function(){
+        var p=aud3.duration?(aud3.currentTime/aud3.duration)*100:0;
+        document.getElementById('progBar3').style.width=p+'%';
+        document.getElementById('curT3').textContent=fmt(aud3.currentTime);
+        document.getElementById('totT3').textContent=fmt(aud3.duration);
+      });
+      // Seamless playback — auto advance to next track
+      aud3.addEventListener('ended', function(){ nxt3(); });
+      function ui3(){
+        document.getElementById('pIco3').innerHTML=playing3
+          ?'<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>'
+          :'<path d="M8 5v14l11-7z"/>';
+        document.getElementById('nowP3').textContent=ct3>=0?'Now playing — '+TRX3[ct3].n:'Select a track to play';
+        document.querySelectorAll('[onclick*="pT3"]').forEach(function(r,i){
+          var a=i===ct3;
+          r.style.paddingLeft=a?'10px':'0';
+          var num=r.querySelector('.tnum'),nm=r.querySelector('.tname');
+          if(num) num.style.color=a?'var(--accent)':'var(--text-dim)';
+          if(nm) nm.style.color=a?'var(--accent)':'var(--text)';
+        });
+      }
+      </script>
+
+      <script>
+      var TRX2 = [{n:"Tunnel", s:"tunnel.mp3"}];
+      var aud2 = document.getElementById('aud2');
+      var ct2 = -1, playing2 = false;
+
+      (function(){
+        var a = new Audio(TRX2[0].s);
+        a.addEventListener('loadedmetadata', function(){
+          var el = document.getElementById('t2d0');
+          if(el) el.textContent = fmt(a.duration);
+        });
+      })();
+
+      function pT2(i){ ct2=i; aud2.src=TRX2[i].s; aud2.play(); playing2=true; ui2(); }
+      function tog2(){
+        if(ct2===-1){ pT2(0); return; }
+        if(playing2){ aud2.pause(); playing2=false; } else { aud2.play(); playing2=true; }
+        ui2();
+      }
+      function sk2(e){
+        var r=document.getElementById('progWrap2').getBoundingClientRect();
+        if(aud2.duration) aud2.currentTime=((e.clientX-r.left)/r.width)*aud2.duration;
+      }
+      aud2.addEventListener('timeupdate', function(){
+        var p=aud2.duration?(aud2.currentTime/aud2.duration)*100:0;
+        document.getElementById('progBar2').style.width=p+'%';
+        document.getElementById('curT2').textContent=fmt(aud2.currentTime);
+        document.getElementById('totT2').textContent=fmt(aud2.duration);
+      });
+      aud2.addEventListener('ended', function(){ playing2=false; ui2(); });
+      function ui2(){
+        document.getElementById('pIco2').innerHTML=playing2
+          ?'<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>'
+          :'<path d="M8 5v14l11-7z"/>';
+        document.getElementById('nowP2').textContent=ct2>=0?'Now playing — '+TRX2[ct2].n:'Select a track to play';
+        document.querySelectorAll('#aud2 ~ * .trow, .trow[onclick*="pT2"]').forEach(function(r,i){
+          var a=i===ct2;
+          r.style.paddingLeft=a?'10px':'0';
+        });
+      }
+      </script>
     </div>
 
-    <!-- 3: SHEET MUSIC -->
-    <div class="panel p-sheet pc" data-index="3">
+    <!-- 4: SHEET MUSIC -->
+    <div class="panel p-film pc" data-index="4">
       <div class="ey rv">Sheet Music</div>
       <h2 class="pt rv">Scores &<br><em>Notation</em></h2>
       <div class="sheet-placeholder rv">
-        <div class="sheet-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        </div>
+        <div class="sheet-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
         <div class="sheet-title">Scores coming soon</div>
         <div class="sheet-sub">Downloadable sheet music and notation files will be available here. Check back soon or get in touch directly.</div>
         <a href="mailto:danialkhani10@gmail.com" style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border:0.5px solid var(--accent2);padding:10px 24px;transition:background 0.2s;" onmouseover="this.style.background='rgba(196,168,130,0.1)'" onmouseout="this.style.background='transparent'">Request a score</a>
       </div>
     </div>
 
-    <!-- 4: PERFORMANCES -->
-    <div class="panel p-perf pc" data-index="4">
+    <!-- 5: PERFORMANCES -->
+    <div class="panel p-perf pc" data-index="5">
       <div class="ey rv">Performances</div>
       <h2 class="pt rv">On <em>Stage</em></h2>
       <div class="rv">
@@ -370,8 +594,8 @@ html,body { width:100%; height:100%; overflow:hidden; font-family:var(--sans); b
       </div>
     </div>
 
-    <!-- 5: CONTACT -->
-    <div class="panel p-contact pc" data-index="5">
+    <!-- 6: CONTACT -->
+    <div class="panel p-contact pc" data-index="6">
       <div class="ey rv">Contact</div>
       <div class="cbig rv">Let's work<br><em>together</em></div>
       <div style="max-width:520px;" class="rv">
@@ -388,7 +612,7 @@ html,body { width:100%; height:100%; overflow:hidden; font-family:var(--sans); b
 
 <script>
 // NAVIGATION
-var cur=0, tot=6;
+var cur=0, tot=7;
 var panEl=document.getElementById('panels');
 var allP=document.querySelectorAll('.panel');
 var dLinks=document.querySelectorAll('.nav-links a');
